@@ -1,6 +1,6 @@
 {
-  "name": "Getting Started Example",
-  "description": "Build an Extension!",
+  "name": "Trump Replacer",
+  "description": "Replace instances of Donald Trump with 'The Former Guy'",
   "version": "1.0",
   "manifest_version": 3,
 	"content_scripts": [
