@@ -3,10 +3,11 @@
   "description": "Build an Extension!",
   "version": "1.0",
   "manifest_version": 3,
-	"background": {
-		"service_worker": "background.js"
-	},
-	"permissions": [
-		"storage"
+	"content_scripts": [
+		{
+			"run_at": "document_start",
+			"matches": ["https://*/*"],
+			"js": ["thirdParty/jquery.3.6.0.min.js", "content.js"]
+		}
 	]
 }
