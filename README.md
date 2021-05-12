@@ -1,1 +1,1 @@
-Simple extension to complete the tab icon functionality for PRs in github
+Simple extension to replace instances of Trump's name with The Former Guy
