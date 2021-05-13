@@ -15,7 +15,7 @@ var findAndReplace = [
 ]
 
 
-const replaceOnDocument = (pattern, string, {target = document.body} = {}) => {
+const replaceOnDocument = ({target = document.body} = {}) => {
   // Handle `string` — see the last section
   [
     target,
@@ -31,5 +31,8 @@ const replaceOnDocument = (pattern, string, {target = document.body} = {}) => {
 };
 
 window.onload = function() {
-	replaceOnDocument('Donald Trump', "The Former Guy", {target: document.body});
+	replaceOnDocument({target: document.body});
 }
+
+var observer = new MutationObserver(replaceOnDocument);
+observer.observe(document.body, {attributes: true, childList: true, subtree: true});
